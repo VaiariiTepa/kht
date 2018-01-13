@@ -9,10 +9,19 @@ class CategorieController extends Controller
 {
     public function all(){
 
-        return categories::all();
+        $categories = categories::all();
+
+        dump($categories);
+
+        return $categories;
 
     }
 
+    public function new(){
+        
+        return view('categories.categorie-form');
+        
+    }
 
 
 }

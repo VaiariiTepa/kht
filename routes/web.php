@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('categories','CategorieController@all');
+
+Route::get('catagories/new','CategorieController@new');
