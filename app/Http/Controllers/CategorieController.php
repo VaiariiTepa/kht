@@ -13,6 +13,24 @@ class CategorieController extends Controller
 
     }
 
+    public function create(Request $request){
+        
+                $input = $request->all();
+                dump($input);
+        
+                $categorie = new Categories();
+
+                    $categorie->nom = $input['nom'];
+                    $categorie->parent_id = $input['categorie'];
+                
+
+                $categorie->save();
+
+                return "l'enregistrement de ".request('nom').' est réussit';
+               
+            }
+        
+
 
 
 }

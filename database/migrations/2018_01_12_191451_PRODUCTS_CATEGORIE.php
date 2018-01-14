@@ -17,7 +17,7 @@ class PRODUCTSCATEGORIE extends Migration
 
             $table->increments('id');
             $table->string('nom')->unique();
-            $table->integer('parent_id');
+            $table->integer('parent_id')->default('0');
             $table->timestamps();
 
         });
